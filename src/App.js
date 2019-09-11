@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  HashRouter as Router,
+  NavLink,
+  Route,
+  Redirect,
+  Switch
+} from 'react-router-dom';
+import AsyncComponent from './AsyncComponent';
 import './App.css';
+
+const Index = AsyncComponent(()=>require('./views/Index'))
+const Login = AsyncComponent(()=>require('./views/Login'))
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <div>
+          <Route path='/index' component={Index}></Route>
+          <Route path='/login' component={Login}></Route>
+
+          <Redirect to="/login" />
+        </div>
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;
