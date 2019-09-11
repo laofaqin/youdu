@@ -20,7 +20,7 @@ function App() {
           <Route path='/index' component={Index}></Route>
           <Route path='/login' component={Login}></Route>
 
-          <Redirect to="/login" />
+          
         </div>
       </Router>
     </div>
