@@ -1,16 +1,19 @@
 import React from 'react';
 import {
   HashRouter as Router,
-  NavLink,
   Route,
   Redirect,
   Switch
 } from 'react-router-dom';
 import AsyncComponent from './AsyncComponent';
-import './App.css';
+// import './App.css';
 
 const Index = AsyncComponent(()=>require('./views/Index'))
 const Login = AsyncComponent(()=>require('./views/Login'))
+const Test = AsyncComponent(()=>require('./views/Test'))
+const Userlist = AsyncComponent(()=>require('./views/Userlist'))
+const Try = AsyncComponent(()=>require('./views/Try'))
+
 
 function App() {
   return (
@@ -19,7 +22,9 @@ function App() {
         <div>
           <Route path='/index' component={Index}></Route>
           <Route path='/login' component={Login}></Route>
-
+          <Route path='/test' component={Test}></Route>
+          <Route path='/list' component={Userlist}></Route>
+          <Route path='/try' component={Try}></Route>
           
         </div>
       </Router>
