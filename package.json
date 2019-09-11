@@ -27,5 +27,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "antd": "^3.23.2",
+    "element-react": "^1.4.34",
+    "element-theme-default": "^1.4.13",
+    "react-router-dom": "^5.0.1"
   }
 }
