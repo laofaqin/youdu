@@ -7,8 +7,10 @@ let base="http://api.cat-shop.penkuoer.com";
 axios.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
     if(localStorage.getItem('token')){
-    		config.headers.common['authorization'] = "Bearer "+localStorage.getItem('token');
+        config.headers.common['authorization'] = "Bearer "+localStorage.getItem('token');
+        console.log('get token');
     }
+    console.log('if了');
     return config;
   }, function (error) {
 	// 对请求错误做些什么

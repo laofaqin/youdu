@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, Menu, Breadcrumb, Icon, Avatar} from "antd";
+import { Layout, Menu, Icon, Avatar} from "antd";
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -11,7 +11,7 @@ export default class Index extends Component {
   render() {
     return (
       <div>
-        <Layout style={{ minHeight: "100vh" }}>
+      <Layout style={{ minHeight: "100vh" }}>
           <Sider
             collapsible
             collapsed={this.state.collapsed}
