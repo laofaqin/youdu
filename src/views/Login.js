@@ -45,7 +45,9 @@ export default class Login extends Component {
       password: this.refs.ipt2.state.value
     };
     api.adminLogin(params).then(data => {
-      // console.log(data);
+      // console.log(data.data.token)
+      let token = data.data.token
+      localStorage.setItem('token',token)
       alert('登陆成功!')
     })
   }
