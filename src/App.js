@@ -15,6 +15,7 @@ const Login = AsyncComponent(()=>require('./views/Login'))
 const Test = AsyncComponent(()=>require('./views/Test'))
 const Userlist = AsyncComponent(()=>require('./views/Userlist'))
 const Try = AsyncComponent(()=>require('./views/Try'))
+const Detail = AsyncComponent(()=>require('./views/Detail'))
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Route path='/test' component={Test}></Route>
           <Route path='/list' component={Userlist}></Route>
           <Route path='/try' component={Try}></Route>
-          
+          <Route path='/detail' component={Detail}></Route>
         </div>
       </Router>
     </div>
