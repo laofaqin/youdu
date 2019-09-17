@@ -11,8 +11,8 @@ class Try extends Component {
     }
     login(){
         api_qin.admin({
-            "userName":'admin',
-            "password":'admin'
+            "userName":'admin001',
+            "password":'admin@12138'
         }).then(res=>{
             console.log(res);
             localStorage.setItem('token',res.data.token)
