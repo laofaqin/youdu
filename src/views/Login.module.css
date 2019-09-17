@@ -1,0 +1,40 @@
+.img{
+    width:100%;
+    height:200px;
+}
+
+.logo{
+    margin-left:250px;
+}
+
+.title{
+    font-size: 30px;
+    color:silver;
+    margin-left:475px;
+}
+
+.input1{
+    margin-left:450px;
+    margin-top:20px;
+}
+
+.ipt1{
+    width:300px;
+    margin-left:10px;
+}
+
+.input2{
+    margin-left:450px;
+    margin-top:20px;
+}
+
+.ipt2{
+    width:300px;
+    margin-left:25px;
+}
+
+.button{
+    width:358px;
+    margin-left:450px;
+    margin-top:20px;
+}

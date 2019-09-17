@@ -5,6 +5,8 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
+// import Index from './views/Index';
+// import Login from './views/Login';
 import AsyncComponent from './AsyncComponent';
 // import './App.css';
 
@@ -15,6 +17,7 @@ const Try = AsyncComponent(()=>require('./views/Try'))
 const Qipao = AsyncComponent(()=>require('./views/Qipao'))
 const Book = AsyncComponent(()=>require('./views/Book'))
 
+const Detail = AsyncComponent(()=>require('./views/Detail'))
 
 
 function App() {
@@ -28,6 +31,7 @@ function App() {
           <Route path='/qipao' component={Qipao}></Route>
           <Route path='/book' component={Book}></Route>
           <Redirect to='/index'/>
+          <Route path='/detail' component={Detail}></Route>
         </div>
       </Router>
     </div>
