@@ -3,6 +3,8 @@ import { Input } from "antd";
 import { Button } from "antd";
 import style from "../views/Login.module.css";
 import api from "../api/api_youdu";
+import { HashRouter as Router, NavLink, Route, Redirect, Switch } from 'react-router-dom';
+
 
 export default class Login extends Component {
   state = {
@@ -38,6 +40,7 @@ export default class Login extends Component {
   }
   // 登陆
   login() {
+    let _this=this
     // console.log(this.refs.ipt1.state.value)
     // console.log(this.refs.ipt2.state.value)
     let params = {
@@ -49,6 +52,8 @@ export default class Login extends Component {
       let token = data.data.token
       localStorage.setItem('token',token)
       alert('登陆成功!')
+      // this.props.history.push('/index')
+      this.props.history.push('/index')	
     })
   }
 }
