@@ -5,14 +5,24 @@ export default{
 	getUser:(params)=>{
 		return API.GET('/api/v1/admin/users',params)
 	},
+	//获取指定用户的信息
+	getOneUser:(pid)=>{
+		return API.GET(`/api/v1/admin/users/${pid}`)
+	},
+	//删除用户
+	delUser:id=>{
+		return API.DELETE(`/api/v1/admin/users/${id}`)
+	},
 	//管理员登录
-	admin:(data)=>{
-		return API.POST('/api/v1/auth/manager_login',data)
+	admin:params=>{
+		return API.POST('/api/v1/auth/manager_login',params)
 	},
-	getDetail:params=>{
-		return API.GET('/detail.php',params)
+	//商品列表
+	booklist:params=>{
+		return API.GET('/api/v1/admin/products',params)
 	},
-	postUserInfo:data=>{
-		return API.POST('/api/v1/auth/reg',data)
+	// 删除商品
+	delBook:id=>{
+		return API.DELETE(`/api/v1/admin/products/${id}`)
 	}
 }
