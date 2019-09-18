@@ -59,12 +59,13 @@ export default class Detail extends Component {
   }
 
   componentDidMount(){
-    let id = "5d7f3f3eb91b9569e466f357"
-    // let arr=[]
-    api.getProDetail(id).then((data)=>{
-      console.log(data.data)
-      // console.log(JSON.parse(data.data.descriptions))
-      this.setState({detail:data.data})
-    })
+    // let id = "5d7f3f3eb91b9569e466f357"
+    // // let arr=[]
+    // api.getProDetail(id).then((data)=>{
+    //   console.log(data.data)
+    //   // console.log(JSON.parse(data.data.descriptions))
+    //   this.setState({detail:data.data})
+    // })
+    
   }
 }
