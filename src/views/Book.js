@@ -100,7 +100,7 @@ class Book extends Component {
 
   Confirm(id, i, index) {
     api.delBook(id).then(res => {
-      console.log(res);
+      // console.log(res);
       let Darr = this.state.data
       Darr.splice(index, 1)
       this.setState({
@@ -109,8 +109,8 @@ class Book extends Component {
     })
   }
   godetail(id){
-    console.log(id);
-    console.log('detail');
+    // console.log(id);
+    // console.log('detail');
     this.props.history.push(`/detail/${id}`)
   }
   render() {
@@ -127,13 +127,13 @@ class Book extends Component {
     )
   }
   componentDidMount() {
-    console.log(this);
+    // console.log(this);
     let params = {
       name: localStorage.getItem('books'),
       per: 100
     }
     api.booklist(params).then(res => {
-      console.log(res.data.products);
+      // console.log(res.data.products);
       let bookarr = []
 
       res.data.products.map((item, i) => {
@@ -221,12 +221,6 @@ class Book extends Component {
 export default Book
 
 
-
-
-
-
-
-
 function onChange(pagination, filters, sorter) {
-  console.log('params', pagination, filters, sorter);
+  // console.log('params', pagination, filters, sorter);
 }
