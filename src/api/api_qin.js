@@ -28,5 +28,17 @@ export default{
 	//添加商品
 	addpro:params=>{
 		return API.POST('/api/v1/admin/products',params)
+	},
+	//用户详情
+	userinfo:id=>{
+		return API.GET(`/api/v1/admin/users/${id}`)
+	},
+	//修改用户
+	edituser:(id,params)=>{
+		return API.PUT(`/api/v1/admin/users/${id}`,params)
+	},
+	//文件上传
+	uploadfile:(file)=>{
+		return API.POST('/api/v1/common/file_upload',file)
 	}
 }
