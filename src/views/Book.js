@@ -68,7 +68,7 @@ class Book extends Component {
                   render: (id,key,index) => (
                       <span>
                           <Popconfirm
-                              title="警告:确认删除这本书吗?"
+                              title="提示:确认删除这本书吗?"
                               icon={<Icon type="question-circle-o" style={{ color: 'red' }} />}
                               onConfirm={this.Confirm.bind(this,id,key.key,index)}
                               okText="确认"
