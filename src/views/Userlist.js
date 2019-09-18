@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
-import { Table, Tag,  Modal,Popconfirm,Input,Button,Icon  } from 'antd';
+import { Table, Tag, Popconfirm,Input,Button,Icon  } from 'antd';
 import Highlighter from 'react-highlight-words';
 import api from '../api/api_qin';
 import AsyncComponent from '../AsyncComponent';
 
-const PCard =AsyncComponent(()=>require("./Card"))
 
 class Userlist extends Component {
     constructor(props) {
@@ -31,7 +30,8 @@ class Userlist extends Component {
                     title: '头像',
                     dataIndex: 'head',
                     key: 'head',
-                    render: () => <img style={{ width: "50px", borderRadius: '10px' }} src="https://www.youdubook.com/uploads/default_photo.jpg" />,
+                render: (head) => 
+                (<img style={{ width: "50px",height:"50px", borderRadius: '10px' }} src={/http/.test(head)?head:"https://www.youdubook.com/uploads/default_photo.jpg"} />),
                 },
                 {
                     title: '用户名',
@@ -53,20 +53,10 @@ class Userlist extends Component {
                         // console.log(tags,key,i);
                         return(
                         <span>
-                            <Tag color="green" style={{ cursor: "pointer" }} onClick={this.getinfo.bind(this, tags)}>
-                                <div>
-                                    <span onClick={this.showModal}>
-                                        详情
-                                    </span>
-                                    <Modal
-                                        title="Basic Modal"
-                                        visible={this.state.visible}
-                                        onOk={this.handleOk}
-                                        onCancel={this.handleCancel}
-                                    >
-                                        <PCard data={tags}/>
-                                    </Modal>
-                                </div>
+                            <Tag color="green" style={{ cursor: "pointer" }} >
+                                <span onClick={this.showModal.bind(this,tags)}>
+                                    详情
+                                </span>
                             </Tag>
                             <Popconfirm
                                 title="警告:确认删除该用户？"
@@ -128,10 +118,9 @@ class Userlist extends Component {
             </div>
         )
     }
-    showModal = () => {
-        this.setState({
-            visible: true,
-        });
+    showModal = (id) => {
+        console.log(id);
+        this.props.history.push('/card/'+id)
     };
 
     handleOk = e => {
