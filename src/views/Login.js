@@ -52,7 +52,6 @@ export default class Login extends Component {
       let token = data.data.token
       localStorage.setItem('token',token)
       alert('登陆成功!')
-      // this.props.history.push('/index')
       this.props.history.push('/index')	
     })
   }
