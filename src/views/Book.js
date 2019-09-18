@@ -3,79 +3,6 @@ import { Table, Input, Button, Icon, Popconfirm, Tag } from 'antd';
 import Highlighter from 'react-highlight-words';
 import api from '../api/api_qin';
 class Book extends Component {
-    constructor (props) {
-        super(props)
-        this.state={
-            currentIndex:1,
-            authorlist:[],
-            columns :[
-                {
-                    title: '#',
-                    key:'id',
-                    render:(text,record,index)=>{
-                      //生成序号
-                          // console.log(text,record,index);
-                          return(
-                            <span>{(this.state.currentIndex-1)*10+(index+1)}</span>
-                          )
-                        }, 
-                        // width: 50,
-                },
-                {
-                  title: '封面',
-                  dataIndex: 'cover',
-                  key: 'cover',
-                  render: (cover) => <img style={{ width: "50px", borderRadius: '10px',height:'70px' }} src={cover} />,
-                  
-                },
-                {
-                  title: '书名',
-                  dataIndex: 'name',
-                  ...this.getColumnSearchProps('name'),
-                },
-                {
-                  title: '作者',
-                  dataIndex: 'author',
-                  ...this.getColumnSearchProps('author'),
-                },
-                {
-                  title: '字数',
-                  dataIndex: 'word',
-                  // defaultSortOrder: 'descend',
-                  sorter: (a, b) => a.word - b.word,
-                },
-                {
-                  title: '进度',
-                  dataIndex: 'gress',
-                  render:gress=>gress?'已完结':'连载中',
-                  filters: [
-                    {
-                      text: '已完结',
-                      value: true,
-                    },
-                    {
-                      text: '连载中',
-                      value: false,
-                    },
-                  ],
-                  // filterMultiple: false,
-                  onFilter: (value, record) =>record.gress==value
-                },
-                {
-                  title: '操作',
-                  key: 'key',
-                  dataIndex: 'id',
-                  render: (id,key,index) => (
-                      <span>
-                          <Popconfirm
-                              title="提示:确认删除这本书吗?"
-                              icon={<Icon type="question-circle-o" style={{ color: 'red' }} />}
-                              onConfirm={this.Confirm.bind(this,id,key.key,index)}
-                              okText="确认"
-                              cancelText="取消"
-                              >
-                              <Tag color="red" style={{cursor:"pointer"}} >删除</Tag>
-                          </Popconfirm>
   constructor(props) {
     super(props)
     this.state = {
@@ -145,7 +72,7 @@ class Book extends Component {
                   </div>
               </Tag>
               <Popconfirm
-                title="警告:确认删除这本书吗?"
+                title="提示:确认删除这本书吗?"
                 icon={<Icon type="question-circle-o" style={{ color: 'red' }} />}
                 onConfirm={this.Confirm.bind(this, id, key.key, index)}
                 okText="确认"
