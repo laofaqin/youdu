@@ -4,6 +4,7 @@ body{
 }
 
 .BooklibraryShow_Left{
+    padding-left:50px;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -121,4 +122,8 @@ ul {
     left: 426px;
     top: 240px;
     font-size: 24px;
+}
+
+.btn{
+    width:90vw;
 }

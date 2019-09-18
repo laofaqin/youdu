@@ -11,9 +11,10 @@ import Card from './views/Card';
 import Edituser from './views/Edituser';
 
 const Index = AsyncComponent(()=>require('./views/Index'))
+import Banner from './views/Banner';
+
 const Add = AsyncComponent(()=>require('./views/Add'))
 
-// const Detail = AsyncComponent(()=>require('./views/Detail'))
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/card/:id' component={Card}></Route>
           <Route path='/detail/:id' component={Detail}></Route>
           <Route path='/edit/:id' component={Edituser}></Route>
+          <Route path='/banner' component={Banner}></Route>
           {/* <Redirect from='/' to='/index'/> */}
         </div>
       </Router>
