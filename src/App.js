@@ -6,12 +6,12 @@ import {
   Switch
 } from 'react-router-dom';
 // import Index from './views/Index';
-// import Login from './views/Login';
+import Login from './views/Login';
 import AsyncComponent from './AsyncComponent';
 // import './App.css';
 
-const Index = AsyncComponent(()=>require('./views/Index'))
-const Login = AsyncComponent(()=>require('./views/Login'))
+// const Index = AsyncComponent(()=>require('./views/Index'))
+// const Login = AsyncComponent(()=>require('./views/Login'))
 const List = AsyncComponent(()=>require('./views/Userlist'))
 const Try = AsyncComponent(()=>require('./views/Try'))
 const Qipao = AsyncComponent(()=>require('./views/Qipao'))
@@ -30,7 +30,7 @@ function App() {
           <Route path='/try' component={Try}></Route>
           <Route path='/qipao' component={Qipao}></Route>
           <Route path='/book' component={Book}></Route>
-          <Redirect to='/index'/>
+          {/* <Redirect to='/index'/> */}
           <Route path='/detail' component={Detail}></Route>
         </div>
       </Router>
