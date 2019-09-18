@@ -19,16 +19,15 @@ export default class Login extends Component {
         <span className={style.title}>有毒小说后台管理系统</span>
         <div className={style.input1}>
           用户名:
-          <Input placeholder="admin" className={style.ipt1} ref="ipt1" />
+          <Input placeholder="admin001" className={style.ipt1} ref="ipt1" />
         </div>
         <div className={style.input2}>
           密码:
-          <Input  placeholder="admin" className={style.ipt2} ref='ipt2'/>
+          <Input  placeholder="admin@12138" className={style.ipt2} ref='ipt2'/>
         </div>
         <Button
           type="primary"
-          block
-          className={style.button}
+          className={style.btn}
           onClick={this.login.bind(this)}
         >
           登陆
@@ -43,12 +42,13 @@ export default class Login extends Component {
     let params = {
       userName: this.refs.ipt1.state.value,
       password: this.refs.ipt2.state.value
-    };
+    }
     api.adminLogin(params).then(data => {
       // console.log(data.data.token)
       let token = data.data.token
       localStorage.setItem('token',token)
       alert('登陆成功!')
+      this.props.history.push('/index')
     })
   }
 }
