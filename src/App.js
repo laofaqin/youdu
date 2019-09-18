@@ -5,6 +5,8 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
+// import Index from './views/Index';
+import Login from './views/Login';
 import AsyncComponent from './AsyncComponent';
 import Detail from './views/Detail';
 
