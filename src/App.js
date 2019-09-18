@@ -9,9 +9,10 @@ import {
 import Login from './views/Login';
 import AsyncComponent from './AsyncComponent';
 import Detail from './views/Detail';
+import Banner from './views/Banner';
 
 const Index = AsyncComponent(()=>require('./views/Index'))
-const Login = AsyncComponent(()=>require('./views/Login'))
+// const Login = AsyncComponent(()=>require('./views/Login'))
 const Add = AsyncComponent(()=>require('./views/Add'))
 
 // const Detail = AsyncComponent(()=>require('./views/Detail'))
@@ -25,6 +26,7 @@ function App() {
           <Route path='/login' component={Login}></Route>
           <Route path='/add' component={Add}></Route>
           <Route path='/detail/:id' component={Detail}></Route>
+          <Route path='/banner' component={Banner}></Route>
           {/* <Redirect from='/' to='/index'/> */}
         </div>
       </Router>
