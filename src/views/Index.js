@@ -5,8 +5,8 @@ import api from '../api/api_qin'
 import AsyncComponent from '../AsyncComponent';
 import Book from './Book';
 import Add from './Add'
+import List from './Userlist';
 
-const List = AsyncComponent(() => require('./Userlist'))
 
 
 const { Header, Content, Footer, Sider } = Layout;
