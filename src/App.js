@@ -2,6 +2,7 @@ import React from 'react';
 import {
   HashRouter as Router,
   Route,
+  Redirect
 } from 'react-router-dom';
 // import Index from './views/Index';
 import Login from './views/Login';
@@ -11,7 +12,7 @@ import Card from './views/Card';
 import Edituser from './views/Edituser';
 
 const Index = AsyncComponent(()=>require('./views/Index'))
-import Banner from './views/Banner';
+// import Banner from './views/Banner';
 
 const Add = AsyncComponent(()=>require('./views/Add'))
 
@@ -27,8 +28,8 @@ function App() {
           <Route path='/card/:id' component={Card}></Route>
           <Route path='/detail/:id' component={Detail}></Route>
           <Route path='/edit/:id' component={Edituser}></Route>
-          <Route path='/banner' component={Banner}></Route>
-          {/* <Redirect from='/' to='/index'/> */}
+          {/* <Route path='/banner' component={Banner}></Route> */}
+          <Redirect from='/' to='/login'/>
         </div>
       </Router>
     </div>
