@@ -119,7 +119,7 @@ class Userlist extends Component {
         )
     }
     showModal = (id) => {
-        console.log(id);
+        // console.log(id);
         this.props.history.push('/card/'+id)
     };
 
