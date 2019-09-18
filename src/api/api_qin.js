@@ -24,5 +24,9 @@ export default{
 	// 删除商品
 	delBook:id=>{
 		return API.DELETE(`/api/v1/admin/products/${id}`)
+	},
+	//添加商品
+	addpro:params=>{
+		return API.POST('/api/v1/admin/products',params)
 	}
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let base="http://api.cat-shop.penkuoer.com";
+let base="https://api.cat-shop.penkuoer.com";
 //拦截器
 
 // 添加请求拦截器

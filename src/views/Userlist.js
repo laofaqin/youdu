@@ -20,7 +20,7 @@ class Userlist extends Component {
                     key:'tags',
                     render:(text,record,index)=>{
                       //生成序号
-                          console.log(text,record,index);
+                        //   console.log(text,record,index);
                           return(
                             <span>{(this.state.currentIndex-1)*10+(index+1)}</span>
                           )
@@ -50,7 +50,7 @@ class Userlist extends Component {
                     key: 'key',
                     dataIndex: 'tags',
                     render: (tags,key,i) => {
-                        console.log(tags,key,i);
+                        // console.log(tags,key,i);
                         return(
                         <span>
                             <Tag color="green" style={{ cursor: "pointer" }} onClick={this.getinfo.bind(this, tags)}>
@@ -87,7 +87,7 @@ class Userlist extends Component {
     }
    
     Confirm(id,i,x){
-        console.log(id,i,x);
+        // console.log(id,i,x);
         api.delUser(id).then(res=>{
             let Darr=this.state.data
             Darr.splice(x,1)

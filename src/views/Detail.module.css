@@ -1,3 +1,8 @@
+body{
+    width:90%;
+    margin:0 auto;
+}
+
 .BooklibraryShow_Left{
     width: 100%;
     height: auto;
@@ -28,7 +33,7 @@
 }
 
 .BooklibraryShow_Left .BookContentB .title {
-    width: 690px;
+    width: auto;
     position: absolute;
     left: 456px;
     top: 25px;

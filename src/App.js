@@ -8,17 +8,13 @@ import {
 // import Index from './views/Index';
 import Login from './views/Login';
 import AsyncComponent from './AsyncComponent';
-// import './App.css';
+import Detail from './views/Detail';
 
-// const Index = AsyncComponent(()=>require('./views/Index'))
-// const Login = AsyncComponent(()=>require('./views/Login'))
-const List = AsyncComponent(()=>require('./views/Userlist'))
-const Try = AsyncComponent(()=>require('./views/Try'))
-const Qipao = AsyncComponent(()=>require('./views/Qipao'))
-const Book = AsyncComponent(()=>require('./views/Book'))
+const Index = AsyncComponent(()=>require('./views/Index'))
+const Login = AsyncComponent(()=>require('./views/Login'))
+const Add = AsyncComponent(()=>require('./views/Add'))
 
-const Detail = AsyncComponent(()=>require('./views/Detail'))
-
+// const Detail = AsyncComponent(()=>require('./views/Detail'))
 
 function App() {
   return (
@@ -27,11 +23,9 @@ function App() {
         <div>
           <Route path='/index' component={Index}></Route>
           <Route path='/login' component={Login}></Route>
-          <Route path='/try' component={Try}></Route>
-          <Route path='/qipao' component={Qipao}></Route>
-          <Route path='/book' component={Book}></Route>
-          {/* <Redirect to='/index'/> */}
-          <Route path='/detail' component={Detail}></Route>
+          <Route path='/add' component={Add}></Route>
+          <Route path='/detail/:id' component={Detail}></Route>
+          {/* <Redirect from='/' to='/index'/> */}
         </div>
       </Router>
     </div>
